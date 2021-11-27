@@ -9,6 +9,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  position: sticky;
+  background: white;
+  top: 0;
+  z-index: 1;
 }
 
 .header__logo {
@@ -51,6 +55,8 @@ button:hover {
 .about__sun—image {
   width: 100px;
   height: 100px;
+  animation: rotation 10s infinite linear;
+  position: absolute;
 }
 
 .about {
@@ -192,4 +198,102 @@ footer {
 
 .footer__links a{
   margin-bottom: 15px;
+}
+
+.animate__animated.animate__fadeInLeft {
+  --animate-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.animate__animated.animate__fadeInRight {
+  --animate-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes rotation{
+  0%{
+    transform: rotate(0);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 720px) {
+  header, .about__info, .footer__container, section {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .header__logo {
+    height: 20px;
+  }
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .form h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__sun—image {
+    width: 75px;
+    height: 75px;
+  }
+  .about__image {
+    width: 280px;
+  }
+}
+
+@media (max-width: 320px) {
+  header {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  section {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .footer__container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .about__info {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .header__logo {
+    height: 20px;
+  }
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .form h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__sun—image {
+    width: 75px;
+    height: 75px;
+  }
+  .about__image {
+    width: 280px;
+  }
+  .footer__container {
+    flex-direction: column;
+  }
+  .about {
+    flex-direction: column-reverse;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .form {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
