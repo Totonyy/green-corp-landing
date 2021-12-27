@@ -68,6 +68,7 @@ button:hover {
  background: url("img/back.png")no-repeat;
  background-position: center;
  background-size: cover;
+ position: relative;
 }
 
 .about h1 {
@@ -278,7 +279,8 @@ footer {
 
 .features__feedback-right {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
+  align-items: stretch;
 }
 .features__box {
   padding: 30px 40px 25px 40px;
@@ -355,6 +357,13 @@ footer {
   margin-right: 10px;
 }
 */
+.orb-canvas {
+  position:absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
 
 @keyframes rotation{
   0%{
