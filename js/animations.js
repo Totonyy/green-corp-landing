@@ -60,7 +60,8 @@ function updateScroll() {
 window.addEventListener('scroll', updateScroll);
 
 
-//плавный скролл к якорю при клике на батон(хрустящий)
+//плавный скролл к якорю при клике на кнопку
+//не работает =( 
 function addSmoothScroll(anchor) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -73,7 +74,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   addSmoothScroll(anchor);
 });
 
-addSmoothScroll(document.querySelector('.more-button'));
+addSmoothScroll(document.querySelector('.more-button')); //возможно, в этом дело
+
+/* добавили внутрь addSmoothScroll
 
 function onLinkClick(event) {
   event.preventDefault(); //предотвратите поведение ссылки по умолчанию, чтобы она не сместила экран к элементу. Воспользуйтесь для этого event.preventDefault
@@ -81,3 +84,4 @@ function onLinkClick(event) {
     behavior: 'smooth'
   });
 };
+*/
